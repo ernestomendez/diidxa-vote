@@ -1,0 +1,20 @@
+{
+    "diidxavoteApp": {
+        "seccion" : {
+            "home": {
+                "title": "Seccions",
+                "createLabel": "Create a new Seccion",
+                "createOrEditLabel": "Create or edit a Seccion"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Seccion {{ id }}?"
+            },
+            "detail": {
+                "title": "Seccion"
+            },
+            "casilla": "Casilla",
+            "municipio": "municipio",
+            "ruta": "ruta"
+        }
+    }
+}

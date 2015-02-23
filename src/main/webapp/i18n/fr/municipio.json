@@ -1,0 +1,21 @@
+{
+    "diidxavoteApp": {
+        "municipio" : {
+            "home": {
+                "title": "Municipios",
+                "createLabel": "Créer un nouveau Municipio",
+                "createOrEditLabel": "Créer ou éditer un Municipio"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Municipio {{ id }} ?"
+            },
+            "detail": {
+                "title": "Municipio"
+            },
+            "nombre": "Nombre",
+            "cabeceraMunicipal": "CabeceraMunicipal",
+            "distrito": "distrito"
+        }
+    }
+}
+

@@ -1,0 +1,18 @@
+{
+    "diidxavoteApp": {
+        "estado" : {
+            "home": {
+                "title": "Estados",
+                "createLabel": "Create a new Estado",
+                "createOrEditLabel": "Create or edit a Estado"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Estado {{ id }}?"
+            },
+            "detail": {
+                "title": "Estado"
+            },
+            "nombre": "Nombre"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "municipio",
+            "relationshipNameCapitalized": "Municipio",
+            "relationshipFieldName": "municipio",
+            "otherEntityName": "municipio",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Municipio",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "ruta",
+            "relationshipNameCapitalized": "Ruta",
+            "relationshipFieldName": "ruta",
+            "otherEntityName": "ruta",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Ruta",
+            "otherEntityField": "descripcion"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "casilla",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Casilla",
+            "fieldNameUnderscored": "casilla"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20150223155653"
+}

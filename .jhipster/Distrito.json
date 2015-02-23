@@ -1,0 +1,30 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "estado",
+            "relationshipNameCapitalized": "Estado",
+            "relationshipFieldName": "estado",
+            "otherEntityName": "estado",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Estado",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Nombre",
+            "fieldNameUnderscored": "nombre"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20150223154528"
+}

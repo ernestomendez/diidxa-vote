@@ -1,0 +1,19 @@
+{
+    "diidxavoteApp": {
+        "ruta" : {
+            "home": {
+                "title": "Rutas",
+                "createLabel": "Créer un nouveau Ruta",
+                "createOrEditLabel": "Créer ou éditer un Ruta"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Ruta {{ id }} ?"
+            },
+            "detail": {
+                "title": "Ruta"
+            },
+            "descripcion": "Descripcion"
+        }
+    }
+}
+

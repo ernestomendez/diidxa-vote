@@ -1,0 +1,122 @@
+<div>
+
+    <h2 translate="diidxavoteApp.municipio.home.title">Municipio</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveMunicipioModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="diidxavoteApp.municipio.home.createLabel">Create a new Municipio</span>
+    </button>
+    <div class="modal fade" id="saveMunicipioModal" tabindex="-1" role="dialog" aria-labelledby="myMunicipioLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" role="form" novalidate
+                      class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+                      ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myMunicipioLabel" translate="diidxavoteApp.municipio.home.createOrEditLabel">Create or edit a Municipio</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="municipio.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.municipio.nombre">Nombre</label>
+                            <input type="text" class="form-control"
+                                   ng-model="municipio.nombre">
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.municipio.cabeceraMunicipal">CabeceraMunicipal</label>
+                            <input type="text" class="form-control"
+                                   ng-model="municipio.cabeceraMunicipal">
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.municipio.distrito">distrito</label>
+                            <select class="form-control" ng-model="municipio.distrito.id" ng-options="distrito.id as distrito.nombre for distrito in distritos">
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteMunicipioConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" ng-submit="confirmDelete(municipio.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="diidxavoteApp.municipio.delete.question" translate-values="{id: '{{municipio.id}}'}">Are you sure you want to delete Municipio {{municipio.id}}?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="diidxavoteApp.municipio.nombre">Nombre</th>
+                    <th translate="diidxavoteApp.municipio.cabeceraMunicipal">CabeceraMunicipal</th>
+                    <th translate="diidxavoteApp.municipio.distrito">distrito</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="municipio in municipios">
+                    <td><a ui-sref="municipioDetail({id:municipio.id})">{{municipio.id}}</a></td>
+                    <td>{{municipio.nombre}}</td>
+                    <td>{{municipio.cabeceraMunicipal}}</td>
+                    <td>{{municipio.distrito.nombre}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="municipioDetail({id:municipio.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(municipio.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(municipio.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

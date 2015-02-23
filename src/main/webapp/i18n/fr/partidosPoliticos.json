@@ -1,0 +1,19 @@
+{
+    "diidxavoteApp": {
+        "partidosPoliticos" : {
+            "home": {
+                "title": "PartidosPoliticoss",
+                "createLabel": "Créer un nouveau PartidosPoliticos",
+                "createOrEditLabel": "Créer ou éditer un PartidosPoliticos"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le PartidosPoliticos {{ id }} ?"
+            },
+            "detail": {
+                "title": "PartidosPoliticos"
+            },
+            "nombre": "Nombre"
+        }
+    }
+}
+

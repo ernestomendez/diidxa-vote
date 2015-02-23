@@ -1,0 +1,20 @@
+{
+    "diidxavoteApp": {
+        "distrito" : {
+            "home": {
+                "title": "Distritos",
+                "createLabel": "Créer un nouveau Distrito",
+                "createOrEditLabel": "Créer ou éditer un Distrito"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Distrito {{ id }} ?"
+            },
+            "detail": {
+                "title": "Distrito"
+            },
+            "nombre": "Nombre",
+            "estado": "estado"
+        }
+    }
+}
+

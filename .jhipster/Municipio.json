@@ -1,0 +1,37 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "distrito",
+            "relationshipNameCapitalized": "Distrito",
+            "relationshipFieldName": "distrito",
+            "otherEntityName": "distrito",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Distrito",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Nombre",
+            "fieldNameUnderscored": "nombre"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "cabeceraMunicipal",
+            "fieldType": "String",
+            "fieldNameCapitalized": "CabeceraMunicipal",
+            "fieldNameUnderscored": "cabecera_municipal"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20150223154856"
+}

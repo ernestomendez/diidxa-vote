@@ -1,0 +1,115 @@
+<div>
+
+    <h2 translate="diidxavoteApp.distrito.home.title">Distrito</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveDistritoModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="diidxavoteApp.distrito.home.createLabel">Create a new Distrito</span>
+    </button>
+    <div class="modal fade" id="saveDistritoModal" tabindex="-1" role="dialog" aria-labelledby="myDistritoLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" role="form" novalidate
+                      class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+                      ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myDistritoLabel" translate="diidxavoteApp.distrito.home.createOrEditLabel">Create or edit a Distrito</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="distrito.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.distrito.nombre">Nombre</label>
+                            <input type="text" class="form-control"
+                                   ng-model="distrito.nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.distrito.estado">estado</label>
+                            <select class="form-control" ng-model="distrito.estado.id" ng-options="estado.id as estado.nombre for estado in estados">
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteDistritoConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" ng-submit="confirmDelete(distrito.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="diidxavoteApp.distrito.delete.question" translate-values="{id: '{{distrito.id}}'}">Are you sure you want to delete Distrito {{distrito.id}}?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="diidxavoteApp.distrito.nombre">Nombre</th>
+                    <th translate="diidxavoteApp.distrito.estado">estado</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="distrito in distritos">
+                    <td><a ui-sref="distritoDetail({id:distrito.id})">{{distrito.id}}</a></td>
+                    <td>{{distrito.nombre}}</td>
+                    <td>{{distrito.estado.nombre}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="distritoDetail({id:distrito.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(distrito.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(distrito.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

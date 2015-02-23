@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span translate="diidxavoteApp.municipio.detail.title">Municipio</span> {{municipio.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.municipio.nombre">Nombre</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{municipio.nombre}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.municipio.cabeceraMunicipal">CabeceraMunicipal</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{municipio.cabeceraMunicipal}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.municipio.distrito">distrito</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{municipio.distrito.nombre}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="municipio"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

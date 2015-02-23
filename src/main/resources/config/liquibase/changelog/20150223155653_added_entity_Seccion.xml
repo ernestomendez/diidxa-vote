@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity Seccion.
+    -->
+    <changeSet id="20150223155653" author="jhipster">
+        <createTable tableName="T_SECCION">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="casilla" type="varchar(255)"/>
+            <column name="municipio_id" type="bigint"/>
+            <column name="ruta_id" type="bigint"/>
+        </createTable>
+        
+        <addForeignKeyConstraint baseColumnNames="municipio_id"
+                                 baseTableName="T_SECCION"
+                                 constraintName="fk_seccion_municipio_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_MUNICIPIO"/>
+
+        <addForeignKeyConstraint baseColumnNames="ruta_id"
+                                 baseTableName="T_SECCION"
+                                 constraintName="fk_seccion_ruta_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_RUTA"/>
+
+    </changeSet>
+</databaseChangeLog>
