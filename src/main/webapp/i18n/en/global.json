@@ -6,6 +6,10 @@
             "home": "Home",
             "entities": {
                 "main": "Entities",
+                "estado": "Estado",
+                "distrito": "Distrito",
+                "municipio": "Municipio",
+                "ruta": "Ruta",
                 "additionalEntity": "JHipster will add addtional entities"
             },
             "account": {
