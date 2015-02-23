@@ -9,5 +9,7 @@
     <include file="classpath:config/liquibase/changelog/20150223154528_added_entity_Distrito.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150223154856_added_entity_Municipio.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150223154955_added_entity_Ruta.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150223155653_added_entity_Seccion.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150223173855_added_entity_PartidosPoliticos.xml" relativeToChangelogFile="false"/>
     <!-- JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

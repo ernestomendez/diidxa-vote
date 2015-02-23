@@ -10,6 +10,8 @@
                 "distrito": "Distrito",
                 "municipio": "Municipio",
                 "ruta": "Ruta",
+                "seccion": "Seccion",
+                "partidosPoliticos": "PartidosPoliticos",
                 "additionalEntity": "JHipster will add addtional entities"
             },
             "account": {
