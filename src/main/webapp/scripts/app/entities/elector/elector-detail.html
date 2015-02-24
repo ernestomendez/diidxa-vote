@@ -1,0 +1,150 @@
+
+<div>
+    <h2><span translate="diidxavoteApp.elector.detail.title">Elector</span> {{elector.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.nombre">Nombre</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.nombre}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.direccion">Direccion</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.direccion}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.edad">Edad</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.edad}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.genero">Genero</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.genero}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.consecutivoIFE">ConsecutivoIFE</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.consecutivoIFE}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.rol">Rol</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.rol}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.email">Email</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.email}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.celular">Celular</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.celular}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.telefono">Telefono</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.telefono}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.estado">estado</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.estado.nombre}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.distrito">distrito</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.distrito.nombre}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.municipio">municipio</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.municipio.nombre}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.ruta">ruta</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.ruta.descripcion}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.seccion">seccion</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.seccion.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.partidosPoliticos">partidosPoliticos</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.partidosPoliticos.nombre}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="diidxavoteApp.elector.elector">elector</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{elector.elector.nombre}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="elector"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

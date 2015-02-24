@@ -12,6 +12,7 @@
                 "ruta": "Ruta",
                 "seccion": "Seccion",
                 "partidosPoliticos": "PartidosPoliticos",
+                "elector": "Elector",
                 "additionalEntity": "JHipster will add addtional entities"
             },
             "account": {

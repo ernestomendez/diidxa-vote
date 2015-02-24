@@ -1,0 +1,213 @@
+<div>
+
+    <h2 translate="diidxavoteApp.elector.home.title">Elector</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveElectorModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="diidxavoteApp.elector.home.createLabel">Create a new Elector</span>
+    </button>
+    <div class="modal fade" id="saveElectorModal" tabindex="-1" role="dialog" aria-labelledby="myElectorLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" role="form" novalidate
+                      class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+                      ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myElectorLabel" translate="diidxavoteApp.elector.home.createOrEditLabel">Create or edit a Elector</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="elector.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.nombre">Nombre</label>
+                            <input type="text" class="form-control"
+                                   ng-model="elector.nombre">
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.direccion">Direccion</label>
+                            <input type="text" class="form-control"
+                                   ng-model="elector.direccion">
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.edad">Edad</label>
+                            <input type="number" class="form-control"
+                                   ng-model="elector.edad">
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.genero">Genero</label>
+                            <input type="text" class="form-control"
+                                   ng-model="elector.genero">
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.consecutivoIFE">ConsecutivoIFE</label>
+                            <input type="number" class="form-control"
+                                   ng-model="elector.consecutivoIFE">
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.rol">Rol</label>
+                            <input type="text" class="form-control"
+                                   ng-model="elector.rol">
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.email">Email</label>
+                            <input type="text" class="form-control"
+                                   ng-model="elector.email">
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.celular">Celular</label>
+                            <input type="text" class="form-control"
+                                   ng-model="elector.celular">
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.telefono">Telefono</label>
+                            <input type="text" class="form-control"
+                                   ng-model="elector.telefono">
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.estado">estado</label>
+                            <select class="form-control" ng-model="elector.estado.id" ng-options="estado.id as estado.nombre for estado in estados">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.distrito">distrito</label>
+                            <select class="form-control" ng-model="elector.distrito.id" ng-options="distrito.id as distrito.nombre for distrito in distritos">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.municipio">municipio</label>
+                            <select class="form-control" ng-model="elector.municipio.id" ng-options="municipio.id as municipio.nombre for municipio in municipios">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.ruta">ruta</label>
+                            <select class="form-control" ng-model="elector.ruta.id" ng-options="ruta.id as ruta.descripcion for ruta in rutas">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.seccion">seccion</label>
+                            <select class="form-control" ng-model="elector.seccion.id" ng-options="seccion.id as seccion.id for seccion in seccions">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.partidosPoliticos">partidosPoliticos</label>
+                            <select class="form-control" ng-model="elector.partidosPoliticos.id" ng-options="partidosPoliticos.id as partidosPoliticos.nombre for partidosPoliticos in partidospoliticoss">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="diidxavoteApp.elector.elector">elector</label>
+                            <select class="form-control" ng-model="elector.elector.id" ng-options="elector.id as elector.nombre for elector in electors">
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteElectorConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" ng-submit="confirmDelete(elector.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="diidxavoteApp.elector.delete.question" translate-values="{id: '{{elector.id}}'}">Are you sure you want to delete Elector {{elector.id}}?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="diidxavoteApp.elector.nombre">Nombre</th>
+                    <th translate="diidxavoteApp.elector.direccion">Direccion</th>
+                    <th translate="diidxavoteApp.elector.edad">Edad</th>
+                    <th translate="diidxavoteApp.elector.genero">Genero</th>
+                    <th translate="diidxavoteApp.elector.consecutivoIFE">ConsecutivoIFE</th>
+                    <th translate="diidxavoteApp.elector.rol">Rol</th>
+                    <th translate="diidxavoteApp.elector.email">Email</th>
+                    <th translate="diidxavoteApp.elector.celular">Celular</th>
+                    <th translate="diidxavoteApp.elector.telefono">Telefono</th>
+                    <th translate="diidxavoteApp.elector.estado">estado</th>
+                    <th translate="diidxavoteApp.elector.distrito">distrito</th>
+                    <th translate="diidxavoteApp.elector.municipio">municipio</th>
+                    <th translate="diidxavoteApp.elector.ruta">ruta</th>
+                    <th translate="diidxavoteApp.elector.seccion">seccion</th>
+                    <th translate="diidxavoteApp.elector.partidosPoliticos">partidosPoliticos</th>
+                    <th translate="diidxavoteApp.elector.elector">elector</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="elector in electors">
+                    <td><a ui-sref="electorDetail({id:elector.id})">{{elector.id}}</a></td>
+                    <td>{{elector.nombre}}</td>
+                    <td>{{elector.direccion}}</td>
+                    <td>{{elector.edad}}</td>
+                    <td>{{elector.genero}}</td>
+                    <td>{{elector.consecutivoIFE}}</td>
+                    <td>{{elector.rol}}</td>
+                    <td>{{elector.email}}</td>
+                    <td>{{elector.celular}}</td>
+                    <td>{{elector.telefono}}</td>
+                    <td>{{elector.estado.nombre}}</td>
+                    <td>{{elector.distrito.nombre}}</td>
+                    <td>{{elector.municipio.nombre}}</td>
+                    <td>{{elector.ruta.descripcion}}</td>
+                    <td>{{elector.seccion.id}}</td>
+                    <td>{{elector.partidosPoliticos.nombre}}</td>
+                    <td>{{elector.elector.nombre}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="electorDetail({id:elector.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(elector.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(elector.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

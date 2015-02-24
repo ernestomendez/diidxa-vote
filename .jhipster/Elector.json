@@ -1,0 +1,146 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "estado",
+            "relationshipNameCapitalized": "Estado",
+            "relationshipFieldName": "estado",
+            "otherEntityName": "estado",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Estado",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "distrito",
+            "relationshipNameCapitalized": "Distrito",
+            "relationshipFieldName": "distrito",
+            "otherEntityName": "distrito",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Distrito",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "municipio",
+            "relationshipNameCapitalized": "Municipio",
+            "relationshipFieldName": "municipio",
+            "otherEntityName": "municipio",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Municipio",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 4,
+            "relationshipName": "ruta",
+            "relationshipNameCapitalized": "Ruta",
+            "relationshipFieldName": "ruta",
+            "otherEntityName": "ruta",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Ruta",
+            "otherEntityField": "descripcion"
+        },
+        {
+            "relationshipId": 5,
+            "relationshipName": "seccion",
+            "relationshipNameCapitalized": "Seccion",
+            "relationshipFieldName": "seccion",
+            "otherEntityName": "seccion",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Seccion",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 6,
+            "relationshipName": "partidosPoliticos",
+            "relationshipNameCapitalized": "PartidosPoliticos",
+            "relationshipFieldName": "partidosPoliticos",
+            "otherEntityName": "partidosPoliticos",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "PartidosPoliticos",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 7,
+            "relationshipName": "elector",
+            "relationshipNameCapitalized": "Elector",
+            "relationshipFieldName": "elector",
+            "otherEntityName": "elector",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Elector",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Nombre",
+            "fieldNameUnderscored": "nombre"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "direccion",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Direccion",
+            "fieldNameUnderscored": "direccion"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "edad",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Edad",
+            "fieldNameUnderscored": "edad"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "genero",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Genero",
+            "fieldNameUnderscored": "genero"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "consecutivoIFE",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "ConsecutivoIFE",
+            "fieldNameUnderscored": "consecutivo_ife"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "rol",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Rol",
+            "fieldNameUnderscored": "rol"
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Email",
+            "fieldNameUnderscored": "email"
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "celular",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Celular",
+            "fieldNameUnderscored": "celular"
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "telefono",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Telefono",
+            "fieldNameUnderscored": "telefono"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20150223191121"
+}

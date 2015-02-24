@@ -1,0 +1,33 @@
+{
+    "diidxavoteApp": {
+        "elector" : {
+            "home": {
+                "title": "Electors",
+                "createLabel": "Create a new Elector",
+                "createOrEditLabel": "Create or edit a Elector"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Elector {{ id }}?"
+            },
+            "detail": {
+                "title": "Elector"
+            },
+            "nombre": "Nombre",
+            "direccion": "Direccion",
+            "edad": "Edad",
+            "genero": "Genero",
+            "consecutivoIFE": "ConsecutivoIFE",
+            "rol": "Rol",
+            "email": "Email",
+            "celular": "Celular",
+            "telefono": "Telefono",
+            "estado": "estado",
+            "distrito": "distrito",
+            "municipio": "municipio",
+            "ruta": "ruta",
+            "seccion": "seccion",
+            "partidosPoliticos": "partidosPoliticos",
+            "elector": "elector"
+        }
+    }
+}

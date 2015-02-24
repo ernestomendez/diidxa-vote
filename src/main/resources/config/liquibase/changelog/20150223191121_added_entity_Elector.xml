@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity Elector.
+    -->
+    <changeSet id="20150223191121" author="jhipster">
+        <createTable tableName="T_ELECTOR">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nombre" type="varchar(255)"/>
+            <column name="direccion" type="varchar(255)"/>
+            <column name="edad" type="integer"/>
+            <column name="genero" type="varchar(255)"/>
+            <column name="consecutivo_ife" type="bigint"/>
+            <column name="rol" type="varchar(255)"/>
+            <column name="email" type="varchar(255)"/>
+            <column name="celular" type="varchar(255)"/>
+            <column name="telefono" type="varchar(255)"/>
+            <column name="estado_id" type="bigint"/>
+            <column name="distrito_id" type="bigint"/>
+            <column name="municipio_id" type="bigint"/>
+            <column name="ruta_id" type="bigint"/>
+            <column name="seccion_id" type="bigint"/>
+            <column name="partidospoliticos_id" type="bigint"/>
+            <column name="elector_id" type="bigint"/>
+        </createTable>
+        
+        <addForeignKeyConstraint baseColumnNames="estado_id"
+                                 baseTableName="T_ELECTOR"
+                                 constraintName="fk_elector_estado_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_ESTADO"/>
+
+        <addForeignKeyConstraint baseColumnNames="distrito_id"
+                                 baseTableName="T_ELECTOR"
+                                 constraintName="fk_elector_distrito_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_DISTRITO"/>
+
+        <addForeignKeyConstraint baseColumnNames="municipio_id"
+                                 baseTableName="T_ELECTOR"
+                                 constraintName="fk_elector_municipio_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_MUNICIPIO"/>
+
+        <addForeignKeyConstraint baseColumnNames="ruta_id"
+                                 baseTableName="T_ELECTOR"
+                                 constraintName="fk_elector_ruta_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_RUTA"/>
+
+        <addForeignKeyConstraint baseColumnNames="seccion_id"
+                                 baseTableName="T_ELECTOR"
+                                 constraintName="fk_elector_seccion_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_SECCION"/>
+
+        <addForeignKeyConstraint baseColumnNames="partidospoliticos_id"
+                                 baseTableName="T_ELECTOR"
+                                 constraintName="fk_elector_partidospoliticos_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_PARTIDOSPOLITICOS"/>
+
+        <addForeignKeyConstraint baseColumnNames="elector_id"
+                                 baseTableName="T_ELECTOR"
+                                 constraintName="fk_elector_elector_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_ELECTOR"/>
+
+    </changeSet>
+</databaseChangeLog>
