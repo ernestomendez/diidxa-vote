@@ -27,7 +27,7 @@
             "ruta": "ruta",
             "seccion": "seccion",
             "partidosPoliticos": "partidosPoliticos",
-            "elector": "elector"
+            "responsable": "responsable"
         }
     }
 }

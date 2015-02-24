@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet author="ernesto (generated)" id="1424741845550-1">
+        <createTable tableName="T_ELECTOR">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="T_ELECTORPK"/>
+            </column>
+            <column name="celular" type="VARCHAR(255)"/>
+            <column name="consecutivo_ife" type="BIGINT"/>
+            <column name="direccion" type="VARCHAR(255)"/>
+            <column name="edad" type="INT"/>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="genero" type="VARCHAR(255)"/>
+            <column name="nombre" type="VARCHAR(255)"/>
+            <column name="rol" type="VARCHAR(255)"/>
+            <column name="telefono" type="VARCHAR(255)"/>
+            <column name="distrito_id" type="BIGINT"/>
+            <column name="estado_id" type="BIGINT"/>
+            <column name="municipio_id" type="BIGINT"/>
+            <column name="partidosPoliticos_id" type="BIGINT"/>
+            <column name="responsable_id" type="BIGINT"/>
+            <column name="ruta_id" type="BIGINT"/>
+            <column name="seccion_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="ernesto (generated)" id="1424741845550-2">
+        <addForeignKeyConstraint baseColumnNames="estado_id" baseTableName="T_ELECTOR" constraintName="FK_615spri4u3xdi5e57d45m5rf2" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="T_ESTADO"/>
+    </changeSet>
+    <changeSet author="ernesto (generated)" id="1424741845550-3">
+        <addForeignKeyConstraint baseColumnNames="responsable_id" baseTableName="T_ELECTOR" constraintName="FK_7sx74ia2hm0jx5t209101m44d" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="T_ELECTOR"/>
+    </changeSet>
+    <changeSet author="ernesto (generated)" id="1424741845550-4">
+        <addForeignKeyConstraint baseColumnNames="municipio_id" baseTableName="T_ELECTOR" constraintName="FK_8fx6oa1kl5h8mb909ryt6mo67" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="T_MUNICIPIO"/>
+    </changeSet>
+    <changeSet author="ernesto (generated)" id="1424741845550-5">
+        <addForeignKeyConstraint baseColumnNames="ruta_id" baseTableName="T_ELECTOR" constraintName="FK_bol7tn9te4yudqijwvyfcosny" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="T_RUTA"/>
+    </changeSet>
+    <changeSet author="ernesto (generated)" id="1424741845550-6">
+        <addForeignKeyConstraint baseColumnNames="seccion_id" baseTableName="T_ELECTOR" constraintName="FK_lo9c26pogpsu8v84hmqvgfhgy" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="T_SECCION"/>
+    </changeSet>
+    <changeSet author="ernesto (generated)" id="1424741845550-7">
+        <addForeignKeyConstraint baseColumnNames="partidosPoliticos_id" baseTableName="T_ELECTOR" constraintName="FK_ny8uiejvoq5m0v290c728t2j3" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="T_PARTIDOSPOLITICOS"/>
+    </changeSet>
+    <changeSet author="ernesto (generated)" id="1424741845550-8">
+        <addForeignKeyConstraint baseColumnNames="distrito_id" baseTableName="T_ELECTOR" constraintName="FK_tr6qtxwxu83rpce3b083qj7pp" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="T_DISTRITO"/>
+    </changeSet>
+</databaseChangeLog>

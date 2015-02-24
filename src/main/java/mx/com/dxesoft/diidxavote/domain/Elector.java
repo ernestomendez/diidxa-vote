@@ -67,7 +67,7 @@ public class Elector implements Serializable {
     private PartidosPoliticos partidosPoliticos;
 
     @ManyToOne
-    private Elector elector;
+    private Elector responsable;
 
     public Long getId() {
         return id;
@@ -197,12 +197,12 @@ public class Elector implements Serializable {
         this.partidosPoliticos = partidosPoliticos;
     }
 
-    public Elector getElector() {
-        return elector;
+    public Elector getResponsable() {
+        return responsable;
     }
 
-    public void setElector(Elector elector) {
-        this.elector = elector;
+    public void setResponsable(Elector responsable) {
+        this.responsable = responsable;
     }
 
     @Override

@@ -12,5 +12,6 @@
     <include file="classpath:config/liquibase/changelog/20150223155653_added_entity_Seccion.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150223173855_added_entity_PartidosPoliticos.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150223191121_added_entity_Elector.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150224013718_changelog.xml" relativeToChangelogFile="false"/>
     <!-- JHipster will add liquibase changelogs here -->
 </databaseChangeLog>
