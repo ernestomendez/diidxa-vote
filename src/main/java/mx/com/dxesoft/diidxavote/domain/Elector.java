@@ -1,13 +1,12 @@
 package mx.com.dxesoft.diidxavote.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 /**
  * A Elector.
@@ -68,6 +67,17 @@ public class Elector implements Serializable {
 
     @ManyToOne
     private Elector responsable;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "seccional_movilizador",
+            joinColumns={@JoinColumn(name = "seccional_id")},
+            inverseJoinColumns={@JoinColumn(name = "movilizador_id")})
+    @JsonManagedReference("movilizador")
+    private List<Elector> movilizador;
+
+    @ManyToMany(mappedBy = "movilizador", fetch = FetchType.EAGER)
+    @JsonManagedReference("movilizador")
+    private List<Elector> seccional;
 
     public Long getId() {
         return id;
@@ -203,6 +213,22 @@ public class Elector implements Serializable {
 
     public void setResponsable(Elector responsable) {
         this.responsable = responsable;
+    }
+
+    public List<Elector> getMovilizador() {
+        return movilizador;
+    }
+
+    public void setMovilizador(List<Elector> movilizador) {
+        this.movilizador = movilizador;
+    }
+
+    public List<Elector> getSeccional() {
+        return seccional;
+    }
+
+    public void setSeccional(List<Elector> seccional) {
+        this.seccional = seccional;
     }
 
     @Override
